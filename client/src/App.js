@@ -1,14 +1,26 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Axios from "axios";
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      data: [],
+      player: [],
     };
   }
+
+  componentDidMount() {
+    Axios.get("http://localhost:5000/api/players")
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(`There was an error: ${error}`);
+      });
+  }
+
   render() {
     return (
       <div className='App'>
