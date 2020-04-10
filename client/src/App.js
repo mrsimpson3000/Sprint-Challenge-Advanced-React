@@ -15,6 +15,9 @@ class App extends React.Component {
     Axios.get("http://localhost:5000/api/players")
       .then((response) => {
         console.log(response.data);
+        this.setState({
+          player: response.data,
+        });
       })
       .catch((error) => {
         console.log(`There was an error: ${error}`);
