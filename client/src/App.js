@@ -4,6 +4,7 @@ import "./App.css";
 import Axios from "axios";
 import PlayerCard from "./PlayerCard";
 import Navbar from "./Navbar";
+import { Row } from "reactstrap";
 
 class App extends React.Component {
   constructor() {
@@ -30,7 +31,9 @@ class App extends React.Component {
     return (
       <>
         <Navbar />
-        <PlayerCard player={this.state.player} />
+        <Row>
+          <PlayerCard player={this.state.player} />
+        </Row>
       </>
     );
   }
