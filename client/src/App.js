@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Axios from "axios";
 import PlayerCard from "./PlayerCard";
+import Navbar from "./Navbar";
 
 class App extends React.Component {
   constructor() {
@@ -28,6 +29,7 @@ class App extends React.Component {
   render() {
     return (
       <>
+        <Navbar />
         <PlayerCard player={this.state.player} />
       </>
     );

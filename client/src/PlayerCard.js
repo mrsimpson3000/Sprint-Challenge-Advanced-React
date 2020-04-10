@@ -6,10 +6,10 @@ export default function PlayerCard(props) {
     <>
       {props.player.map((player) => (
         <Col key={player.id} md='4' className='mt-2 mb-2'>
-          <Card className='bg-danger text-center'>
+          <Card className='bg-success text-center'>
             <CardBody>
-              <CardHeader className='bg-primary'>World Cup Player</CardHeader>
-              <CardText className='text-light'>
+              <CardHeader className='bg-primary'>Player Card</CardHeader>
+              <CardText className='text-light pt-2'>
                 Player Name: {player.name}
               </CardText>
               <CardText className='text-light'>
